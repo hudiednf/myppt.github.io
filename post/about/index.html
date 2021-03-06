@@ -8,11 +8,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.0/css/all.min.css">
-<link rel="shortcut icon" href="https://myptc.xyz/favicon.ico?v=1615022860082">
+<link rel="shortcut icon" href="https://myptc.xyz/favicon.ico?v=1615024007071">
 <link rel="stylesheet" href="https://myptc.xyz/styles/main.css">
 
 
 
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css" />
+  
+
+  
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
@@ -37,7 +43,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://myptc.xyz">
-        <img src="https://myptc.xyz/images/avatar.png?v=1615022860082" class="site-logo">
+        <img src="https://myptc.xyz/images/avatar.png?v=1615024007071" class="site-logo">
         <h1 class="site-title">AB模板源码</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -118,6 +124,12 @@
             
 
             
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
 
           </div>
 
@@ -140,6 +152,29 @@ var app = new Vue({
 </script>
 
 
+
+
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'ef8ac0c95f1d3d59616f',
+        clientSecret: '32a6a003cab91af2406f6c1e6ccf616eeca650cb',
+        repo: 'myppt.github.io',
+        owner: 'hudiednf',
+        admin: ['hudiednf'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
